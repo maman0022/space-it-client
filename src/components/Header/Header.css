@@ -1,0 +1,56 @@
+header {
+  background-color: #701E00;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 2.5%;
+}
+
+header h1 {
+  margin: 0;
+  text-align: center;
+}
+
+header a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+header nav a {
+  background-color: #000000;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 5px;
+  width: 10ch;
+  text-align: center;
+  margin: 0.1rem 1rem;
+}
+
+header nav a:hover, header nav a:active, header nav a:focus {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+header>nav, header div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header div span {
+  color: #ffffff;
+  font-weight: bolder;
+}
+
+@media all and (min-width:800px) {
+  header {
+    flex-direction: row;
+  }
+  header>nav, header div {
+    justify-content: flex-end;
+  }
+}
