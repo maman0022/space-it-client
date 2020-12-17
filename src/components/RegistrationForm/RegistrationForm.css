@@ -1,0 +1,43 @@
+form {
+  background-color: #e2dfde;
+  border-radius: 5px;
+  padding: 10px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form label {
+  display: block;
+  font-size: medium;
+}
+
+form input {
+  margin: 0.5rem auto;
+  width: 100%;
+  max-width: 600px;
+  font-size: medium;
+}
+
+form button[type=submit] {
+  font-size: medium;
+  border-radius: 5px;
+  width: max-content;
+}
+
+form footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form div[role=alert]>p {
+  color: #8F0000;
+  text-align: center;
+}
+
+#explanation {
+  font-size: x-large;
+  text-align: center;
+}

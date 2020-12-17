@@ -16,7 +16,7 @@ class RegistrationRoute extends Component {
   render() {
     return (
       <section>
-        <p>
+        <p id='explanation'>
           Practice learning a language with the spaced reptition revision technique.
         </p>
         <h2>Sign up</h2>

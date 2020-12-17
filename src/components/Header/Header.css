@@ -11,6 +11,8 @@ header {
 header h1 {
   margin: 0;
   text-align: center;
+  color: #ffffff;
+  background-color: transparent;
 }
 
 header a {
