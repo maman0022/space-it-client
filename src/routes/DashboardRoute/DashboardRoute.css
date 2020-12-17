@@ -1,0 +1,59 @@
+#dashboard-language {
+  width: 100%;
+  background-color: #e2dfde;
+  color: #000000;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#dashboard-title {
+  text-decoration: underline;
+  margin: 0.5rem auto;
+}
+
+#dashboard-total {
+  font-size: x-large;
+  margin: 0 auto 1rem auto;
+  font-weight: bolder;
+  color: darkgreen;
+}
+
+#dashboard-words {
+  margin-top: 0;
+  border-bottom: solid 2px;
+  padding-bottom: 10px;
+}
+
+#dashboard-words p {
+  margin: 0 0 0 0.5rem;
+}
+
+#dashboard-start {
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px;
+  width: max-content;
+  text-align: center;
+  text-decoration: none;
+}
+
+#dashboard-start:hover, #dashboard-start:active, #dashboard-start:focus {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dashboard-correct {
+  color: darkgreen;
+}
+
+.dashboard-incorrect {
+  color: darkred;
+}
+
+.dashboard-word {
+  font-weight: bold;
+  margin: 0.5rem 0.5rem 0.25rem 0;
+}
