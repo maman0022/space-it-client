@@ -1,0 +1,20 @@
+#current-word {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+#guess-form {
+  margin: 1rem auto;
+}
+
+#learn-title {
+  text-decoration: underline;
+}
+
+#learn-total {
+  margin-top: 1rem;
+}
+
+.learn-score {
+  margin: 0.1rem auto;
+}

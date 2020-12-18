@@ -36,7 +36,7 @@ describe(`User story: Presented with word`, function() {
             .siblings('span')
             .should('have.text', languageHeadFixture.nextWord)
         })
-        cy.get('p').eq(0)
+        cy.get('p').eq(2)
           .should(
             'have.text',
             `Your total score is: ${languageHeadFixture.totalScore}`,

@@ -12,7 +12,7 @@
   margin: 0.5rem auto;
 }
 
-#dashboard-total {
+.total-correct {
   font-size: x-large;
   margin: 0 auto 1rem auto;
   font-weight: bolder;
@@ -45,11 +45,11 @@
   color: #000000;
 }
 
-.dashboard-correct {
+.word-correct {
   color: darkgreen;
 }
 
-.dashboard-incorrect {
+.word-incorrect {
   color: darkred;
 }
 

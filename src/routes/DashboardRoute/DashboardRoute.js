@@ -8,8 +8,6 @@ import './DashboardRoute.css'
 class DashboardRoute extends Component {
   static contextType = UserContext
 
-
-
   componentDidMount() {
     const headers = {
       Authorization: `Bearer ${TokenService.getAuthToken()}`
@@ -37,12 +35,12 @@ class DashboardRoute extends Component {
               <h4 className='dashboard-word'>
                 {word.original}
               </h4>
-              <p className='dashboard-correct'>{`correct answer count: ${word.correct_count}`}</p>
-              <p className='dashboard-incorrect'>{`incorrect answer count: ${word.incorrect_count}`}</p>
+              <p className='word-correct'>{`correct answer count: ${word.correct_count}`}</p>
+              <p className='word-incorrect'>{`incorrect answer count: ${word.incorrect_count}`}</p>
             </li>
           )}
         </ul>
-        <p id='dashboard-total'>{`Total correct answers: ${this.context.language.total_score}`}</p>
+        <p className='total-correct'>{`Total correct answers: ${this.context.language.total_score}`}</p>
         <Link to='/learn' id='dashboard-start'>Start practicing</Link>
       </section>
     );
