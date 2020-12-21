@@ -20,7 +20,6 @@ class LearningRoute extends Component {
       .then(word => {
         this.context.setCurrentWord(word)
       })
-
   }
 
   render() {
