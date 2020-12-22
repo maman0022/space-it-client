@@ -58,3 +58,9 @@
   font-weight: bold;
   margin: 0.5rem 0.5rem 0.25rem 0;
 }
+
+.dashboard-translation {
+  font-weight: lighter;
+  font-style: italic;
+  margin: 0.5rem 0.5rem 0.25rem 0;
+}

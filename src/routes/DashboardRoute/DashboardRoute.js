@@ -37,7 +37,7 @@ class DashboardRoute extends Component {
           {this.state.words.map((word, index) =>
             <li key={index}>
               <h4 className='dashboard-word'>
-                {word.original}
+                {word.original} - <span className='dashboard-translation'>{word.translation}</span>
               </h4>
               <p className='word-correct'>{`correct answer count: ${word.correct_count}`}</p>
               <p className='word-incorrect'>{`incorrect answer count: ${word.incorrect_count}`}</p>
