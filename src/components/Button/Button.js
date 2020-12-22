@@ -1,6 +1,5 @@
 import React from 'react'
 import cx from 'classnames'
-import './Button.css'
 
 const Button = React.forwardRef(({ className, ...props }, ref) => {
   return (
