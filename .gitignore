@@ -26,3 +26,5 @@ debug.log
 
 cypress/videos
 cypress/screenshots
+
+.vercel
