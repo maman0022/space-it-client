@@ -1,5 +1,5 @@
-# Spaced Repetition Client
-Live Link: https://spaced-repetition.maman0022.vercel.app 
+# SpACE IT!
+Live Link: https://space-it.maman0022.vercel.app
   
 ## Summary  
 This is the client side of my full-stack spaced repetition language learning app. This app presents users with a list of words in French. The score for each word and the total score is also presented on the dashboard.  
