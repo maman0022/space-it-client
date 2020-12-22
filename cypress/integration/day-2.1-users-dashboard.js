@@ -57,7 +57,7 @@ describe(`User story: User's dashboard`, function() {
       words.forEach((word, idx) => {
         cy.get('main section li').eq(idx).within($li => {
 
-          cy.get('h4').should('have.text', word.original)
+          cy.get('h4').should('have.text', `${word.original} - ${word.translation}`)
 
           cy.root()
             .should(
