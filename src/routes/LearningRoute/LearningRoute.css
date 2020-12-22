@@ -18,3 +18,7 @@
 .learn-score {
   margin: 0.1rem auto;
 }
+
+.error-message {
+  color: red;
+}

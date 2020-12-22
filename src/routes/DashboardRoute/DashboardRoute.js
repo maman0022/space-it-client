@@ -8,6 +8,11 @@ import './DashboardRoute.css'
 class DashboardRoute extends Component {
   static contextType = UserContext
 
+  state = {
+    language: {},
+    words: []
+  }
+
   componentDidMount() {
     const headers = {
       Authorization: `Bearer ${TokenService.getAuthToken()}`
@@ -19,18 +24,17 @@ class DashboardRoute extends Component {
           : res.json()
       )
       .then(({ language, words }) => {
-        this.context.setLanguage(language)
-        this.context.setWords(words)
+        this.setState({ language, words })
       })
   }
 
   render() {
     return (
       <section>
-        <h2 id='dashboard-language'>{this.context.language.name}</h2>
+        <h2 id='dashboard-language'>{this.state.language.name}</h2>
         <h3 id='dashboard-title'>Words to practice</h3>
         <ul id='dashboard-words'>
-          {this.context.words.map((word, index) =>
+          {this.state.words.map((word, index) =>
             <li key={index}>
               <h4 className='dashboard-word'>
                 {word.original}
@@ -40,7 +44,7 @@ class DashboardRoute extends Component {
             </li>
           )}
         </ul>
-        <p className='total-correct'>{`Total correct answers: ${this.context.language.total_score}`}</p>
+        <p className='total-correct'>{`Total correct answers: ${this.state.language.total_score}`}</p>
         <Link to='/learn' id='dashboard-start'>Start practicing</Link>
       </section>
     );

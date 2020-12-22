@@ -20,7 +20,7 @@ form input {
   font-size: medium;
 }
 
-form button[type=submit] {
+form button[type=submit], #next-word-button {
   font-size: medium;
   border-radius: 5px;
   width: max-content;

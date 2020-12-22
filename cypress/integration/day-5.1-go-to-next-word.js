@@ -37,7 +37,7 @@ describe(`User story: Go to next word`, function() {
     cy.fixture('language-guess-generic.json')
       .then(languageHeadFixture => {
         cy.get('main').within($main => {
-          cy.get('p').eq(0)
+          cy.get('p').eq(2)
             .should(
               'have.text',
               `Your total score is: ${languageHeadFixture.totalScore}`,
