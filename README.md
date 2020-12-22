@@ -13,4 +13,4 @@ Clicking on a button to start practicing takes the user to the learning page. Th
 ## Tech Stack  
 This is a React based app built using class components, with React Router handling navigation. This app was created with "create-react-app" node module so it contains all dependencies associated with that. Testing is done with cypress. The words are queued using a linked list implementation. The algorithm that facilitates the spaced repetition technique is an instance method of the linked list class.  
  
-The back-end is hosted on Heroku and uses PostgreSQL as the persistence layer. More information on the back-end can be found here - https://github.com/maman0022/spaced-repetition-server.
+The back-end is hosted on Heroku and uses PostgreSQL as the persistence layer. More information on the back-end can be found here - https://github.com/maman0022/space-it-server.
