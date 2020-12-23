@@ -23,10 +23,7 @@ class RegistrationForm extends Component {
       password: password.value,
     })
       .then(user => {
-        name.value = ''
-        username.value = ''
-        password.value = ''
-        this.props.onRegistrationSuccess()
+        this.props.onRegistrationSuccess(username.value, password.value)
       })
       .catch(res => {
         this.setState({ error: res.error })
