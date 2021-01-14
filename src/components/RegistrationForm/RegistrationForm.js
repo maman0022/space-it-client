@@ -10,19 +10,23 @@ class RegistrationForm extends Component {
     onRegistrationSuccess: () => { }
   }
 
-  state = { error: null }
+  state = { error: null, loading: false }
 
   firstInput = React.createRef()
 
   handleSubmit = ev => {
     ev.preventDefault()
     const { name, username, password } = ev.target
+
+    this.setState({ error: null, loading: true })
+
     AuthApiService.postUser({
       name: name.value,
       username: username.value,
       password: password.value,
     })
       .then(user => {
+        this.setState({ loading: false })
         this.props.onRegistrationSuccess(username.value, password.value)
       })
       .catch(res => {
@@ -35,11 +39,12 @@ class RegistrationForm extends Component {
   }
 
   render() {
-    const { error } = this.state
+    const { error, loading } = this.state
     return (
       <form
         onSubmit={this.handleSubmit}
       >
+        {loading && !error && <h3 className='loading-message'>Loading</h3>}
         <div role='alert'>
           {error && <p>{error}</p>}
         </div>

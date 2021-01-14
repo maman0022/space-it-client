@@ -11,7 +11,7 @@ class LoginForm extends Component {
 
   static contextType = UserContext
 
-  state = { error: null }
+  state = { error: null, loading: false }
 
   firstInput = React.createRef()
 
@@ -19,7 +19,7 @@ class LoginForm extends Component {
     ev.preventDefault()
     const { username, password } = ev.target
 
-    this.setState({ error: null })
+    this.setState({ error: null, loading: true })
 
     AuthApiService.postLogin({
       username: username.value,
@@ -28,6 +28,7 @@ class LoginForm extends Component {
       .then(res => {
         username.value = ''
         password.value = ''
+        this.setState({ loading: false })
         this.context.processLogin(res.authToken)
         this.props.onLoginSuccess()
       })
@@ -41,12 +42,13 @@ class LoginForm extends Component {
   }
 
   render() {
-    const { error } = this.state
+    const { error, loading } = this.state
     return (
       <form
         className='LoginForm'
         onSubmit={this.handleSubmit}
       >
+        {loading && !error && <h3 className='loading-message'>Loading</h3>}
         <div role='alert'>
           {error && <p>{error}</p>}
         </div>
